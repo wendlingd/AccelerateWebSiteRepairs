@@ -1,9 +1,13 @@
 ---
-title: "Accelerate web site repairs: An R Markdown script for use with spidering and traffic data"
+title: 'Accelerate web site repairs: An R Markdown script for use with spidering and
+  traffic data'
 output:
   html_notebook:
     toc: yes
     toc_depth: 1
+  html_document:
+    toc: yes
+    toc_depth: '1'
 ---
 
 by Dan Wendling; last updated: 8/14/2017
@@ -1201,27 +1205,7 @@ chEditsByDate <- pageData %>%
 ```{r}
 ggplot(chEditsByDate, aes(x = DateModified, y = Edits)) + geom_bar(stat = "identity") + labs(title = "Editing activity by date", subtitle = "(templated pages, past 6 months)")
 ```
-
-
-### Broken links by communication package, counts for the "top 20"
-
-slice(1:20 not working, not sure why. Filter is base R, but arrange not working? https://stackoverflow.com/questions/25994307/filtering-data-frame-based-on-row-number.
-
-## Broke this, please fix
-
-# ```{r}
-# chbLinksByContentGr <- groupData %>% 
-#   filter(!is.na(bLinkCntGr), !is.na(contentGroup)) %>%
-#   summarise(bLinks = n()) %>%
-#   arrange(desc(bLinkCntGr)) %>% 
-#   select(contentGroup, bLinkCntGr) %>% 
-#   filter(row_number() <= 20, row_number() >= 2)
-# ```
-# 
-# ```{r}
-#   ggplot(chbLinksByContentGr, aes(x = reorder(contentGroup, bLinkCntGr), y = bLinkCntGr)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Communication packages with broken links", subtitle = "Top 20 by broken link count")
-# ```
-
+`
 
 ### Broken links by email owner
 
