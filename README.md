@@ -6,6 +6,6 @@ Use this annotated RStudio Notebook script when you want to unite and summarize 
 
 The output of this particular script allows for a new kind of web site quality analytics that is enterprise-readable, interactive, and free, by way of the D3.js tree map I have posted to GitHub, although Tableau, Power BI, Excel, etc. could also be used. The result will be two CSV files:
 
-groupData - Information summarized at the page group / communication package level, by ownership and product/service. It summarizes broken links; the number of pages not recently reviewed; the number of images that may be too large for smart phones; etc. whatever your web site "problem of the moment" might be.
+1. groupData - Information summarized at the page group / communication package level, by ownership and product/service. It summarizes broken links; the number of pages not recently reviewed; the number of images that may be too large for smart phones; etc. whatever your web site "problem of the moment" might be.
 
-pageData - Information summarized at the page level: the specific broken link data, the specific dates of review, the specific images that are too large for smart phones, etc.
+2. pageData - Information summarized at the page level: the specific broken link data, the specific dates of review, the specific images that are too large for smart phones, etc.
