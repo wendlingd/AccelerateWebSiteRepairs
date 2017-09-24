@@ -1053,7 +1053,7 @@ chOwnerPageCount <- groupData %>%
 ```
 
 ```{r}
-ggplot(chOwnerPageCount, aes(x = reorder(stewardTopCat, totPagesOwner), y = totPagesOwner)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Page count by content steward")
+ggplot(chOwnerPageCount, aes(x = reorder(stewardTopCat, totPagesOwner), y = totPagesOwner)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Page count by content steward") + geom_text(aes(label = totPagesOwner), position = position_dodge(0.9), hjust="inward", size=3)
 ```
 
 
@@ -1076,7 +1076,7 @@ chOwnerAveMoPV <- groupData %>%
 ```
 
 ```{r}
-ggplot(chOwnerAveMoPV, aes(x = reorder(stewardTopCat, totAveMonthlyUniquePgViews), y = totAveMonthlyUniquePgViews)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Traffic by owner", subtitle = "(Average monthly unique page views)")
+ggplot(chOwnerAveMoPV, aes(x = reorder(stewardTopCat, totAveMonthlyUniquePgViews), y = totAveMonthlyUniquePgViews)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Traffic by owner", subtitle = "(Average monthly unique page views)") + geom_text(aes(label = totAveMonthlyUniquePgViews), position = position_dodge(0.9), hjust="inward", size=3)
 ```
 
 ### Top 20 communication packages by traffic (Average monthly unique page views)
@@ -1092,7 +1092,7 @@ chGroupAveMoPV <- groupData %>%
 ```
 
 ```{r}
-ggplot(chGroupAveMoPV, aes(x = reorder(contentGroup, totAveMonthlyUniquePgViewsGr), y = totAveMonthlyUniquePgViewsGr)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Top 20 communication packages by traffic", subtitle = "(Average monthly unique page views)")
+ggplot(chGroupAveMoPV, aes(x = reorder(contentGroup, totAveMonthlyUniquePgViewsGr), y = totAveMonthlyUniquePgViewsGr)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Top 20 communication packages by traffic", subtitle = "(Average monthly unique page views)") + geom_text(aes(label = totAveMonthlyUniquePgViewsGr), position = position_dodge(0.9), hjust="inward", size=3)
 ```
 
 
@@ -1111,7 +1111,7 @@ chEditsBySteward <- pageData %>%
 ```
 
 ```{r}
-ggplot(chEditsBySteward, aes(x = reorder(contentSteward, Edits), y = Edits)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Top editing activity by specific owner", subtitle = "(templated pages, past 3 months)")
+ggplot(chEditsBySteward, aes(x = reorder(contentSteward, Edits), y = Edits)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Top editing activity by specific owner", subtitle = "(templated pages, past 3 months)") + geom_text(aes(label = Edits), position = position_dodge(0.9), hjust="inward", size=3)
 ```
 
 
@@ -1165,7 +1165,7 @@ chEditsByContentGr <- groupData %>%
 
 
 ```{r}
-  ggplot(chEditsByContentGr, aes(x = reorder(contentGroup, recentEditsCntGr), y = recentEditsCntGr)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Top editing activity by communication package", subtitle = "(templated pages, past 3 months)")
+  ggplot(chEditsByContentGr, aes(x = reorder(contentGroup, recentEditsCntGr), y = recentEditsCntGr)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Top editing activity by communication package", subtitle = "(templated pages, past 3 months)") + geom_text(aes(label = recentEditsCntGr), position = position_dodge(0.9), hjust="inward", size=3)
 ```
 
 
@@ -1203,7 +1203,7 @@ chEditsByDate <- pageData %>%
 ```
 
 ```{r}
-ggplot(chEditsByDate, aes(x = DateModified, y = Edits)) + geom_bar(stat = "identity") + labs(title = "Editing activity by date", subtitle = "(templated pages, past 6 months)")
+ggplot(chEditsByDate, aes(x = DateModified, y = Edits)) + geom_bar(stat = "identity") + labs(title = "Editing activity by date", subtitle = "(templated pages, past 6 months)") + geom_text(aes(label = Edits), position = position_dodge(0.9), hjust="inward", size=3)
 ```
 `
 
@@ -1239,7 +1239,7 @@ chbLinksByEmail <- pageData %>%
 ```
 
 ```{r}
-  ggplot(chbLinksByEmail, aes(x = reorder(ContactEmail, bLinks), y = bLinks)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Broken links by email owner")
+  ggplot(chbLinksByEmail, aes(x = reorder(ContactEmail, bLinks), y = bLinks)) + geom_bar(stat = "identity") + coord_flip() + labs(title = "Broken links by email owner") + geom_text(aes(label = bLinks), position = position_dodge(0.9), hjust="inward", size=3)
 ```
 
 
